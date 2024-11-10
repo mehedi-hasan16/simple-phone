@@ -10,8 +10,10 @@ const AllPhone = () => {
   const [phones, setPhones] = useState([]);
   const [cartData, setCartData] = useState([]);
 
-  const handleBuyButton = (id) => {
-    addToLocalStorage(id);
+  const handleBuyButton = phone => {
+    const newPhone = [...cartData, phone];
+    setCartData(newPhone)
+    addToLocalStorage(phone.id);
   };
 
   useEffect(() => {

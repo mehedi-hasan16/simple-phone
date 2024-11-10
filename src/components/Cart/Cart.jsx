@@ -1,10 +1,12 @@
 import React from 'react';
 
-const Cart = ({phone}) => {
+const Cart = ({cartData}) => {
+    console.log(cartData);
     return (
         <div>
-           <p>Name: {phone?.name}</p>
-           <p>Price: {phone?.price}</p>
+           {
+cartData.map(e=><p>{e.name}</p>)
+           }
         </div>
     );
 };
