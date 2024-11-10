@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Apple iPhone 13",
+        "model": "A2634",
+        "picture": "https://example.com/images/iphone13.jpg",
+        "price": 799.00
+    },
+    {
+        "id": 2,
+        "name": "Samsung Galaxy S21",
+        "model": "SM-G991B",
+        "picture": "https://example.com/images/galaxys21.jpg",
+        "price": 699.99
+    },
+    {
+        "id": 3,
+        "name": "Google Pixel 6",
+        "model": "GA03138-US",
+        "picture": "https://example.com/images/pixel6.jpg",
+        "price": 599.00
+    },
+    {
+        "id": 4,
+        "name": "OnePlus 9",
+        "model": "LE2115",
+        "picture": "https://example.com/images/oneplus9.jpg",
+        "price": 729.00
+    },
+    {
+        "id": 5,
+        "name": "Xiaomi Mi 11",
+        "model": "M2011K2C",
+        "picture": "https://example.com/images/mi11.jpg",
+        "price": 749.00
+    },
+    {
+        "id": 6,
+        "name": "Sony Xperia 1 III",
+        "model": "XQ-BC62",
+        "picture": "https://example.com/images/xperia1iii.jpg",
+        "price": 1199.99
+    },
+    {
+        "id": 7,
+        "name": "Motorola Edge 20 Pro",
+        "model": "XT2153-1",
+        "picture": "https://example.com/images/edge20pro.jpg",
+        "price": 699.00
+    },
+    {
+        "id": 8,
+        "name": "Huawei P50 Pro",
+        "model": "JAD-AL50",
+        "picture": "https://example.com/images/p50pro.jpg",
+        "price": 1049.99
+    },
+    {
+        "id": 9,
+        "name": "Oppo Find X3 Pro",
+        "model": "CPH2173",
+        "picture": "https://example.com/images/findx3pro.jpg",
+        "price": 1099.00
+    },
+    {
+        "id": 10,
+        "name": "Asus ROG Phone 5",
+        "model": "ZS673KS",
+        "picture": "https://example.com/images/rogphone5.jpg",
+        "price": 999.00
+    }
+]
