@@ -40,10 +40,8 @@ const AllPhone = () => {
   }, [phones]);
 
   return (
-    <div>
-        <p>Total Item: {cartData.length}</p>
-        <Cart cartData= {cartData} handleRemoveFromCart={handleRemoveFromCart}></Cart>
-      <div>
+    <div className="flex gap-2">
+      <div className="grid grid-cols-3 gap-5 w-4/5">
       {phones.map((element) => (
         <SinglePhone
           key={element.id}
@@ -52,6 +50,12 @@ const AllPhone = () => {
         ></SinglePhone>
       ))}
       </div>
+      {/* cart show on display */}
+      <div className="w-1/5">
+      <h2 className="font-bold text-2xl">Selected Item</h2>
+        <p>Total Item: {cartData.length}</p>
+        <Cart cartData= {cartData} handleRemoveFromCart={handleRemoveFromCart}></Cart>
+        </div>
     </div>
   );
 };
