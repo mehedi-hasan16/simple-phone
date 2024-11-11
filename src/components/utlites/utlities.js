@@ -11,11 +11,19 @@ const saveDataLocalStorage = cart =>{
     localStorage.setItem('cart', stringify)
 }
 
-const addToLocalStorage= id=>{
+const addToLocalStorage= id =>{
     const cart = getLocalStorageData();
     cart.push(id);
     saveDataLocalStorage(cart)
 
 }
 
-export {addToLocalStorage, getLocalStorageData};
+const removeFromLocalStorage = id =>{
+    const getData = getLocalStorageData();
+    console.log('get data', getData);
+    const remaning = getData.filter(item=>item !== id);
+    console.log('remaning', remaning);
+    saveDataLocalStorage(remaning);
+}
+
+export {addToLocalStorage, getLocalStorageData, removeFromLocalStorage};

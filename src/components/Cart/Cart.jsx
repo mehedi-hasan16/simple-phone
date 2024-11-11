@@ -1,11 +1,14 @@
 import React from 'react';
 
-const Cart = ({cartData}) => {
-    console.log(cartData);
+const Cart = ({cartData, handleRemoveFromCart}) => {
     return (
         <div>
            {
-cartData.map(e=><p>{e.name}</p>)
+cartData.map(e=><div key={e.id}> 
+    <p>Name: {e.name}</p>
+    <p>Price: ${e.price}</p>
+    <button onClick={()=>handleRemoveFromCart(e.id)}>X</button>
+    </div>)
            }
         </div>
     );

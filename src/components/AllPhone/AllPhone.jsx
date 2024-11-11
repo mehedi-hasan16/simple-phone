@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SinglePhone from "../SinglePhone/SinglePhone";
-import {
-  addToLocalStorage,
-  getLocalStorageData,
-} from "../../assets/utlites/utlities";
 import Cart from "../cart/cart";
+import { addToLocalStorage, getLocalStorageData, removeFromLocalStorage } from "../utlites/utlities";
 
 const AllPhone = () => {
   const [phones, setPhones] = useState([]);
@@ -16,6 +13,12 @@ const AllPhone = () => {
     addToLocalStorage(phone.id);
   };
 
+  const handleRemoveFromCart = id =>{
+
+    const remaing= cartData.filter(idx=>idx.id !==id);
+    setCartData(remaing);
+    removeFromLocalStorage(id);
+  }
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
@@ -25,7 +28,6 @@ const AllPhone = () => {
   useEffect(() => {
     if (phones.length > 0) {
       const localStorageData = getLocalStorageData();
-      console.log(localStorageData, phones);
       const savedCart = [];
       for (const id of localStorageData) {
         const phone = phones.find((element) => element.id === id);
@@ -33,7 +35,6 @@ const AllPhone = () => {
             savedCart.push(phone)
         }
       }
-      console.log(savedCart);
       setCartData(savedCart);
     }
   }, [phones]);
@@ -41,7 +42,7 @@ const AllPhone = () => {
   return (
     <div>
         <p>Total Item: {cartData.length}</p>
-        <Cart cartData= {cartData}></Cart>
+        <Cart cartData= {cartData} handleRemoveFromCart={handleRemoveFromCart}></Cart>
       <div>
       {phones.map((element) => (
         <SinglePhone
